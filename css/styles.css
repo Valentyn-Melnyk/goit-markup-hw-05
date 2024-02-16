@@ -11,7 +11,7 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-/* ---------------Add reset--------------- */
+/* #region ------ Add reset ---------------------------- */
 h1,
 h2,
 h3,
@@ -44,6 +44,17 @@ a {
   font-family: inherit;
   color: currentColor;
   display: inline-flex;
+  /* ------- */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 input,
 textarea {
@@ -51,16 +62,7 @@ textarea {
   font-size: inherit;
   /* line-height: inherit; */
 }
-
-/* -------------------------------------------- */
-.header {
-  display: flex;
-  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-}
-
+/* #endregion ------ Add reset ---------------------------- */
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -74,8 +76,14 @@ textarea {
   align-items: center;
   justify-content: space-between;
 }
-
-/* ---------------------------Top line - Navigation---------------------- */
+/* #region ------ Top line - Navigation----------------- */
+.header {
+  display: flex;
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
 .navigation {
   display: flex;
   align-items: center;
@@ -153,10 +161,10 @@ textarea {
 .address-items:focus {
   color: #404bbf;
 }
-/* ---------------------------------Solution----------------------- */
+/* #endregion ------ Top line - Navigation----------------- */
+/* #region ------ Solution ----------------------------- */
 .solution {
-  /* max-width: 1440px;  */
-  max-width: 100%;
+  max-width: 1440px;
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -188,28 +196,18 @@ textarea {
 .order-service-button {
   background-color: #4d5ae5;
   color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
   padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   min-width: 169px;
-  height: 56px;
-  border: none;
+  /* height: 56px; */
   display: block;
   margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service-button:hover,
 .order-service-button:focus {
   background-color: #404bbf;
 }
-
-/* ----------------------Advantages---------------------- */
+/* #endregion ------ Solution ----------------------------- */
+/* #region ------ Advantages --------------------------- */
 .advantages {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -261,8 +259,8 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
-/* ------------------------Our Team------------------------ */
+/* #endregion ------ Advantages --------------------------- */
+/* #region ------ Our Team ----------------------------- */
 .our-team {
   background-color: #f4f4fd;
   padding-top: 120px;
@@ -312,8 +310,8 @@ textarea {
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
-
-/* -------------------Social media (Our Team)----------------- */
+/* #endregion ------ Our Team ----------------------------- */
+/* #region ------ Social media (Our Team) -------------- */
 .socials-ul-team {
   display: flex;
   list-style-type: none;
@@ -341,8 +339,8 @@ textarea {
 .socials-svg-team {
   fill: #f4f4fd;
 }
-
-/* --------------------------Portfolio---------------- */
+/* #endregion ------ Social media (Our Team) -------------- */
+/* #region ------ Porfolio ----------------------------- */
 .portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -393,11 +391,9 @@ textarea {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .portfolio-items:hover .portfolio-p-hidden {
   transform: translateY(0%);
 }
-
 .portfolio-items-id {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -421,8 +417,8 @@ textarea {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-
-/* ------------------------Footer------------------------ */
+/* #endregion ------ Porfolio ----------------------------- */
+/* #region ------ Footer ------------------------------- */
 .footer {
   background-color: #2e2f42;
   color: #f4f4fd;
@@ -456,11 +452,11 @@ textarea {
   letter-spacing: 0.02em;
   color: #ffffff;
 }
-.footer-p-socials {
-  margin-bottom: 16px;
+/* #endregion ------ Footer ------------------------------- */
+/* #region ------ Social media (Footer)----------------- */
+.social-container {
+  margin-right: 80px;
 }
-
-/* -------------------Social media (Footer)----------------- */
 .socials-ul {
   display: flex;
   list-style-type: none;
@@ -489,3 +485,49 @@ textarea {
   width: 24px;
   height: 24px;
 }
+/* #endregion ------ Social media (Footer)----------------- */
+/* #region ------ Subscribe -----------------------------*/
+.subscribe-forma {
+  max-width: 453px;
+  margin-left: auto;
+}
+.subscribe-container {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+.subscribe-label {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-span {
+  margin-bottom: 16px;
+}
+.subscribe-input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  min-width: 264px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.subscribe-btn {
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe-svg {
+  width: 24px;
+  height: 20px;
+  fill: #fff;
+}
+/* #endregion ------ Subscribe -----------------------------*/
