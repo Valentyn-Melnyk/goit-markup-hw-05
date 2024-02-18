@@ -57,7 +57,8 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 input,
-textarea {
+textarea,
+button {
   font-family: inherit;
   font-size: inherit;
   /* line-height: inherit; */
@@ -177,7 +178,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .solution-header {
   max-width: 496px;
@@ -427,7 +428,7 @@ textarea {
 }
 .footer-container {
   display: flex;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   max-width: 1440px;
   width: 1158px;
   flex-shrink: 0;
@@ -531,3 +532,26 @@ textarea {
   fill: #fff;
 }
 /* #endregion ------ Subscribe -----------------------------*/
+/* Order service */
+.form {
+  /* display: flex;
+  flex-direction: column; */
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid #212121;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  max-width: 1440px;
+  width: 408px;
+  right: 0;
+}
+.form-input {
+  display: block;
+  /* margin: 0 auto; */
+}
+.form-button {
+  align-self: flex-start;
+  /* display: block; */
+  /* margin: 0 auto; */
+}
