@@ -534,24 +534,32 @@ button {
 /* #endregion ------ Subscribe -----------------------------*/
 /* Order service */
 .form {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   padding: 8px;
   border: 1px solid #212121;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  max-width: 1440px;
-  width: 408px;
+  max-width: 408px;
   right: 0;
+}
+.form-span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
 }
 .form-input {
   display: block;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 .form-button {
-  align-self: flex-start;
-  /* display: block; */
-  /* margin: 0 auto; */
+  /* align-self: flex-start; */
+  display: block;
+  margin: 0 auto;
 }

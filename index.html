@@ -522,7 +522,7 @@
 
     <!-- #region Footer -->
     <footer class="footer">
-      <div class="footer-container">
+      <div class="container footer-container">
         <div class="container-webstudio">
           <a class="navigation-logo footer-logo" href="./index.html"
             >Web<span class="footer-logo-studio">Studio</span></a
@@ -613,19 +613,21 @@
     <!-- <overlay>
       <modal> -->
     <!-- <p></p> -->
-    
-    
-      <form class="form container" name="order-service" autocomplete="off">
-        <label for=""><span></span>
-          <input class="form-input" type="text" name="name"/>
-          <input class="form-input" type="text" name="telefon"/>
-          <input class="form-input" type="text" name="email"/>
+
+    <div class="container">
+      <form class="form" name="order-service" autocomplete="off">
+        <label for=""
+          ><span class="form-span"
+            >Leave your contacts and we will call you back</span
+          >
+          <input class="form-input" type="text" name="name" />
+          <input class="form-input" type="text" name="telefon" />
+          <input class="form-input" type="text" name="email" />
         </label>
+        <button class="form-button" type="submit">Send</button>
       </form>
-      <button class="form-button" type="submit">Send</button>
-      </form>
-    
-    
+    </div>
+
     <!-- </modal>
     </overlay> -->
   </body>
