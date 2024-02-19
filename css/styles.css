@@ -178,7 +178,7 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 .solution-header {
   max-width: 496px;
@@ -532,18 +532,44 @@ button {
   fill: #fff;
 }
 /* #endregion ------ Subscribe -----------------------------*/
-/* Order service */
+/* #region ------ Order service ------------------------ */
+
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 8px;
+  gap: 16px;
+  padding: 24px;
   border: 1px solid #212121;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
+  border-radius: 4px;
   max-width: 408px;
-  right: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-btn-close {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.form-btn-close:hover {
+  background-color: #404bbf;
+}
+.form-close-svg {
+  fill: #2e2f42;
+}
+.form-btn-close:hover .form-close-svg {
+  fill: #fff;
 }
 .form-span {
   font-family: "Roboto", sans-serif;
@@ -553,13 +579,105 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  display: block;
+}
+.form-name-div {
+  position: relative;
+}
+.form-name-svg {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+.form-phone-div {
+  position: relative;
+}
+.form-phone-svg {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+.form-email-div {
+  position: relative;
+}
+.form-email-svg {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+
+/* -------------------------------- */
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .form-input {
-  display: block;
-  margin: 0 auto;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+.form-textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 120px;
+  resize: none;
+}
+.form-accept {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.form-svg-accept {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  fill: #f4f4fd;
+}
+.form-svg-accept:hover,
+.form-svg-accept:focus,
+.form-svg-accept:active {
+  border-color: #404bbf;
+  fill: #404bbf;
+}
+.form-p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-p-policy {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
 }
 .form-button {
-  /* align-self: flex-start; */
   display: block;
   margin: 0 auto;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
 }
+.form-button:hover,
+.form-button:focus {
+  background-color: #404bbf;
+}
+/* #endregion ------ Order service ------------------------ */
