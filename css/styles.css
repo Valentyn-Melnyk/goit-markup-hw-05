@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -56,12 +59,19 @@ a {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.btn:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
 input,
 textarea,
 button {
   font-family: inherit;
   font-size: inherit;
   /* line-height: inherit; */
+}
+textarea {
+  resize: none;
 }
 /* #endregion ------ Add reset ---------------------------- */
 .container {
@@ -554,7 +564,16 @@ button {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .modal {
   padding: 72px 24px 24px 24px;
   position: absolute;
@@ -582,6 +601,7 @@ button {
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -604,19 +624,10 @@ button {
   color: #2e2f42;
   margin-bottom: 16px;
 }
-.form-div-items {
+.modal-items-div {
   margin-bottom: 8px;
 }
-.form-div-input {
-  position: relative;
-}
-.form-svg {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 16px;
-}
-.form-label {
+.modal-items-label {
   display: block;
   margin-bottom: 4px;
   font-weight: 400;
@@ -625,7 +636,18 @@ button {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.form-input {
+
+.modal-div-input {
+  position: relative;
+}
+.modal-items-svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-items-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -635,16 +657,19 @@ button {
   padding-left: 38px;
   outline: transparent;
 }
-.form-input:focus {
+.modal-items-svg {
+  fill: #8e8f99;
+}
+.modal-items-input:focus {
   border-color: #4d5ae5;
 }
-.form-input:focus .form-svg {
+.modal-items-input:focus + .modal-items-svg {
   fill: #4d5ae5;
 }
-.form-div-area {
+.modal-area-div {
   margin-bottom: 16px;
 }
-.form-textarea {
+.modal-textarea {
   color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -659,20 +684,28 @@ button {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-textarea:focus {
+.modal-textarea::placeholder {
+  color: #8e8f99;
+}
+.modal-textarea:focus {
   border-color: #4d5ae5;
 }
-.form-div-accept {
+.modal-accept-div {
   margin-bottom: 24px;
 }
-.form-modal-privacy {
+.modal-accept-input:checked {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.modal-accept-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.form-checkbox {
+.modal-accept-span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -685,13 +718,21 @@ button {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
 }
-.form-a-policy {
+/* .modal-accept-svg {
+  fill: #8e8f99;
+} */
+.modal-accept-a {
   color: #4d5ae5;
   line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
-.form-button {
+.modal-accept-input:checked + .modal-accept-label .modal-accept-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.modal-btn-send {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
@@ -706,8 +747,9 @@ button {
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-button:hover,
-.form-button:focus {
+.modal-btn-send:hover,
+.modal-btn-send:focus {
   background-color: #404bbf;
 }
+
 /* #endregion ------ Order service ------------------------ */
