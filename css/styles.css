@@ -456,12 +456,13 @@ textarea {
   color: #f4f4fd;
 }
 .footer-p {
-  max-width: 264px;
+  /* max-width: 264px; */
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 /* #endregion ------ Footer ------------------------------- */
 /* #region ------ Social media (Footer)----------------- */
@@ -517,9 +518,6 @@ textarea {
 .subscribe-label {
   color: #fff;
 }
-::placeholder {
-  color: #ffffff;
-}
 .subscribe-input {
   width: 264px;
   height: 40px;
@@ -534,7 +532,13 @@ textarea {
   border-radius: 4px;
   font-weight: 400;
 }
-
+.subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
 .subscribe-btn {
   min-width: 165px;
   height: 40px;
@@ -638,6 +642,7 @@ textarea {
 }
 
 .modal-div-input {
+  width: 100%;
   position: relative;
 }
 .modal-items-svg {
@@ -699,6 +704,7 @@ textarea {
   fill: #f4f4fd;
 }
 .modal-accept-label {
+  /* display: block; */
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -731,6 +737,9 @@ textarea {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.modal-accept-input:focus-visible + .modal-accept-label .modal-accept-span {
+  box-shadow: 0 0 0 4px rgba(64, 75, 191, 0.25);
 }
 .modal-btn-send {
   display: block;
